@@ -46,6 +46,14 @@ const Index = () => {
     });
   };
 
+  const handleResumeDownload = () => {
+    // You can replace this with your actual resume file URL
+    toast({
+      title: "Resume Download",
+      description: "Please upload your resume file to enable download functionality.",
+    });
+  };
+
   const skills = {
     Frontend: ['React.js', 'JSP', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
     Backend: ['Core Java', 'Spring Boot', 'REST APIs', 'Microservices', 'Maven'],
@@ -87,6 +95,7 @@ const Index = () => {
                 <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
                 <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
                 <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
+                <a href="#resume" className="hover:text-blue-600 transition-colors">Resume</a>
                 <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
               </div>
 
@@ -121,6 +130,7 @@ const Index = () => {
                 <a href="#about" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">About</a>
                 <a href="#projects" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Projects</a>
                 <a href="#skills" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Skills</a>
+                <a href="#resume" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Resume</a>
                 <a href="#contact" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Contact</a>
               </div>
             </div>
@@ -139,11 +149,11 @@ const Index = () => {
                 Building scalable web applications and innovative solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700" onClick={handleResumeDownload}>
                   <Download className="mr-2 h-5 w-5" />
                   View Resume
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                   <Mail className="mr-2 h-5 w-5" />
                   Contact Me
                 </Button>
@@ -295,21 +305,67 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Resume Section */}
-        <section className="py-20 bg-gray-50 dark:bg-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Resume</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Download my resume to learn more about my experience and qualifications
-            </p>
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume PDF
-            </Button>
+        {/* Enhanced Resume Section */}
+        <section id="resume" className="py-20 bg-gray-50 dark:bg-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Resume</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                Download my resume to learn more about my experience and qualifications
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <Card className="mb-8">
+                <CardHeader>
+                  <CardTitle className="text-center">Professional Summary</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 dark:text-gray-300 text-center mb-6">
+                    Experienced Full Stack Developer with expertise in Java ecosystem and modern web technologies. 
+                    Proven track record of delivering scalable applications and innovative solutions.
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="font-semibold mb-3">Key Highlights</h4>
+                      <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>• 3+ years of Full Stack Development experience</li>
+                        <li>• Expert in Core Java & Spring Boot</li>
+                        <li>• Proficient in React.js & Modern Frontend</li>
+                        <li>• Database Design & MySQL Optimization</li>
+                        <li>• RESTful API Development & Integration</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold mb-3">Recent Projects</h4>
+                      <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>• E-Waste Facility Locator Application</li>
+                        <li>• Job & Internship Portal with Analytics</li>
+                        <li>• Enterprise Dashboard Solutions</li>
+                        <li>• Real-time Location Services</li>
+                        <li>• Admin Control Systems</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <div className="text-center">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700" onClick={handleResumeDownload}>
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Resume PDF
+                </Button>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                  Last updated: December 2024
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Updated Contact Section */}
         <section id="contact" className="py-20 bg-white dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -322,32 +378,61 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-blue-600" />
-                    <span>developer@email.com</span>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg">
+                      <Mail className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="font-medium">Email</p>
+                      <a href="mailto:your.email@example.com" className="text-blue-600 hover:underline">
+                        your.email@example.com
+                      </a>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <Linkedin className="h-5 w-5 text-blue-600" />
-                    <span>linkedin.com/in/yourprofile</span>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg">
+                      <Linkedin className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="font-medium">LinkedIn</p>
+                      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                        linkedin.com/in/yourprofile
+                      </a>
+                    </div>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <Github className="h-5 w-5 text-blue-600" />
-                    <span>github.com/yourusername</span>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="bg-blue-100 dark:bg-blue-900 p-3 rounded-lg">
+                      <Github className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="font-medium">GitHub</p>
+                      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                        github.com/yourusername
+                      </a>
+                    </div>
                   </div>
                 </div>
                 
                 <div className="mt-8">
-                  <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
+                  <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
                   <div className="flex space-x-4">
-                    <Button variant="outline" size="icon">
-                      <Linkedin className="h-5 w-5" />
+                    <Button variant="outline" size="icon" asChild>
+                      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                        <Linkedin className="h-5 w-5" />
+                      </a>
                     </Button>
-                    <Button variant="outline" size="icon">
-                      <Github className="h-5 w-5" />
+                    <Button variant="outline" size="icon" asChild>
+                      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                        <Github className="h-5 w-5" />
+                      </a>
                     </Button>
-                    <Button variant="outline" size="icon">
-                      <Mail className="h-5 w-5" />
+                    <Button variant="outline" size="icon" asChild>
+                      <a href="mailto:your.email@example.com">
+                        <Mail className="h-5 w-5" />
+                      </a>
                     </Button>
                   </div>
                 </div>
