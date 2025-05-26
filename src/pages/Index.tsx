@@ -321,7 +321,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Enhanced Resume Section */}
+        {/* Resume Section */}
         <section id="resume" className="py-20 bg-gray-50 dark:bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -331,57 +331,19 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="max-w-4xl mx-auto">
-              <Card className="mb-8">
-                <CardHeader>
-                  <CardTitle className="text-center">Professional Summary</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 dark:text-gray-300 text-center mb-6">
-                    Experienced Full Stack Developer with expertise in Java ecosystem and modern web technologies. 
-                    Proven track record of delivering scalable applications and innovative solutions.
-                  </p>
-                  
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h4 className="font-semibold mb-3">Key Highlights</h4>
-                      <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                        <li>• 3+ years of Full Stack Development experience</li>
-                        <li>• Expert in Core Java & Spring Boot</li>
-                        <li>• Proficient in React.js & Modern Frontend</li>
-                        <li>• Database Design & MySQL Optimization</li>
-                        <li>• RESTful API Development & Integration</li>
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold mb-3">Recent Projects</h4>
-                      <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                        <li>• E-Waste Facility Locator Application</li>
-                        <li>• Job & Internship Portal with Analytics</li>
-                        <li>• Enterprise Dashboard Solutions</li>
-                        <li>• Real-time Location Services</li>
-                        <li>• Admin Control Systems</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <div className="text-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700" onClick={handleResumeDownload}>
-                  <Download className="mr-2 h-5 w-5" />
-                  Download Resume PDF
-                </Button>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-                  Last updated: December 2024
-                </p>
-              </div>
+            <div className="max-w-4xl mx-auto text-center">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700" onClick={handleResumeDownload}>
+                <Download className="mr-2 h-5 w-5" />
+                Download Resume PDF
+              </Button>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                Last updated: December 2024
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Updated Contact Section */}
+        {/* Contact Section */}
         <section id="contact" className="py-20 bg-white dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
