@@ -64,19 +64,43 @@ const Index = () => {
   const projects = [
     {
       title: "E-Waste Facility Locator",
-      description: "A location-based environmental application that helps users find nearby e-waste disposal facilities. Features real-time location tracking, facility reviews, and environmental impact metrics.",
-      tech: ['React.js', 'Spring Boot', 'MySQL', 'Google Maps API', 'Geolocation'],
+      description: "The project tackles the increasing issue of electronic waste by providing a solution for proper disposal. It links users to authorized e-waste disposal centers, ensuring safe and responsible handling of electronic waste. By encouraging proper disposal, the initiative supports environmentally sustainable e-waste practices.",
+      tech: ['React.js', 'Spring Boot', 'MySQL', 'REST APIs', 'Full Stack'],
       github: "#",
       live: "#",
       image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500&h=300&fit=crop"
     },
     {
-      title: "Job & Internship Portal",
-      description: "Comprehensive job portal with advanced dashboards, analytics, Excel upload functionality, and admin controls. Features job matching algorithms and real-time notifications.",
-      tech: ['Spring Boot', 'React.js', 'MySQL', 'Apache POI', 'Chart.js'],
+      title: "Online Voting System",
+      description: "The system allows registered users to vote remotely in a controlled and secure environment. It eliminates manual errors, long queues, and geographical barriers, making voting more efficient. The platform maintains transparency and accuracy while safeguarding the election process.",
+      tech: ['Full Stack', 'Spring Boot', 'React.js', 'MySQL', 'Security'],
       github: "#",
       live: "#",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?w=500&h=300&fit=crop"
+    },
+    {
+      title: "Library Management System",
+      description: "Developed a system using Java, MySQL, and JDBC to handle book inventory, user registrations, and track borrowing/returns. Ensured smooth and intuitive functionality for seamless library management.",
+      tech: ['Core Java', 'MySQL', 'JDBC', 'Database Design'],
+      github: "#",
+      live: "#",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop"
+    },
+    {
+      title: "Bank Application",
+      description: "A comprehensive banking application developed with Core Java and MySQL. Features account management, transaction processing, and secure banking operations with JDBC connectivity.",
+      tech: ['Core Java', 'MySQL', 'JDBC', 'Banking System'],
+      github: "#",
+      live: "#",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop"
+    },
+    {
+      title: "Food Ordering System",
+      description: "A food ordering application built with Core Java and MySQL. Enables customers to browse menus, place orders, and manage food delivery services with efficient database management using JDBC.",
+      tech: ['Core Java', 'MySQL', 'JDBC', 'Order Management'],
+      github: "#",
+      live: "#",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500&h=300&fit=crop"
     }
   ];
 
@@ -237,7 +261,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="aspect-video bg-gray-200 dark:bg-gray-700">
@@ -249,12 +273,12 @@ const Index = () => {
                   </div>
                   <CardHeader>
                     <CardTitle className="text-xl">{project.title}</CardTitle>
-                    <CardDescription>{project.description}</CardDescription>
+                    <CardDescription className="text-sm">{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tech.map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="outline">{tech}</Badge>
+                        <Badge key={techIndex} variant="outline" className="text-xs">{tech}</Badge>
                       ))}
                     </div>
                     <div className="flex gap-4">
