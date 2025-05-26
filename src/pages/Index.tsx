@@ -385,8 +385,8 @@ const Index = () => {
                     </div>
                     <div>
                       <p className="font-medium">Email</p>
-                      <a href="mailto:your.email@example.com" className="text-blue-600 hover:underline">
-                        your.email@example.com
+                      <a href="mailto:savioursurya2001@gmail.com" className="text-blue-600 hover:underline">
+                        savioursurya2001@gmail.com
                       </a>
                     </div>
                   </div>
@@ -397,8 +397,8 @@ const Index = () => {
                     </div>
                     <div>
                       <p className="font-medium">LinkedIn</p>
-                      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                        linkedin.com/in/yourprofile
+                      <a href="https://www.linkedin.com/in/surya-c-992b38232/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                        linkedin.com/in/surya-c-992b38232
                       </a>
                     </div>
                   </div>
@@ -409,8 +409,8 @@ const Index = () => {
                     </div>
                     <div>
                       <p className="font-medium">GitHub</p>
-                      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                        github.com/yourusername
+                      <a href="https://github.com/SURYA0404" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                        github.com/SURYA0404
                       </a>
                     </div>
                   </div>
@@ -420,17 +420,17 @@ const Index = () => {
                   <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
                   <div className="flex space-x-4">
                     <Button variant="outline" size="icon" asChild>
-                      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.linkedin.com/in/surya-c-992b38232/" target="_blank" rel="noopener noreferrer">
                         <Linkedin className="h-5 w-5" />
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" asChild>
-                      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                      <a href="https://github.com/SURYA0404" target="_blank" rel="noopener noreferrer">
                         <Github className="h-5 w-5" />
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" asChild>
-                      <a href="mailto:your.email@example.com">
+                      <a href="mailto:savioursurya2001@gmail.com">
                         <Mail className="h-5 w-5" />
                       </a>
                     </Button>
