@@ -191,22 +191,13 @@ const Index = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Passionate Full Stack Developer with expertise in building robust, scalable web applications. 
-                I love turning complex problems into simple, beautiful solutions.
+                I am a dedicated and detail-oriented software engineer with a strong passion for building efficient and user-friendly applications. 
+                As a developer, I enjoy solving problems, learning new technologies, and contributing to impactful projects through clean and maintainable code.
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-semibold mb-6">My Journey</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  As a dedicated Full Stack Developer, I specialize in creating end-to-end web solutions using modern technologies. 
-                  My expertise spans from backend development with Core Java and Spring Boot to creating intuitive frontends with React.js.
-                </p>
-                <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  I have successfully developed and deployed multiple projects including environmental applications and enterprise portals, 
-                  always focusing on clean code, user experience, and scalable architecture.
-                </p>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">Problem Solver</Badge>
                   <Badge variant="secondary">Team Player</Badge>
