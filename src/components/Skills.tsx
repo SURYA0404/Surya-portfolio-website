@@ -4,10 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const Skills = () => {
   const skills = {
-    Frontend: ['React.js', 'JSP', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap'],
-    Backend: ['Core Java', 'Spring Boot', 'REST APIs', 'Microservices', 'Maven'],
-    Database: ['MySQL', 'JDBC', 'Hibernate', 'Database Design'],
-    Tools: ['Postman', 'GitHub', 'Cloudinary', 'VS Code', 'IntelliJ IDEA', 'Git']
+    'Programming Languages': ['Core Java', 'JavaScript'],
+    'Frameworks & Libraries': ['Spring Boot', 'React.js (Basic)'],
+    'Frontend Technologies': ['HTML5', 'CSS3', 'JSP', 'Bootstrap'],
+    'Database & Tools': ['MySQL', 'JDBC', 'Postman', 'GitHub', 'Cloudinary']
   };
 
   return (
@@ -16,20 +16,20 @@ export const Skills = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Skills</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Technologies and tools I work with
+            Technologies and tools I work with as a Software Engineer
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {Object.entries(skills).map(([category, skillList]) => (
-            <Card key={category}>
+            <Card key={category} className="hover:shadow-md transition-shadow">
               <CardHeader>
                 <CardTitle className="text-lg text-center">{category}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
                   {skillList.map((skill, index) => (
-                    <Badge key={index} variant="secondary" className="w-full justify-center">
+                    <Badge key={index} variant="secondary" className="w-full justify-center py-2">
                       {skill}
                     </Badge>
                   ))}
@@ -37,6 +37,21 @@ export const Skills = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Card className="max-w-2xl mx-auto">
+            <CardHeader>
+              <CardTitle className="text-xl">Professional Experience</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex items-center justify-center space-x-4">
+                <Badge variant="outline" className="text-sm">Internship at Besant Technologies</Badge>
+                <Badge variant="outline" className="text-sm">Fresh Graduate</Badge>
+                <Badge variant="outline" className="text-sm">Ready to Learn & Grow</Badge>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

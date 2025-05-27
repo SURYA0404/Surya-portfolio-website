@@ -8,38 +8,35 @@ export const Projects = () => {
   const projects = [
     {
       title: "E-Waste Facility Locator",
-      description: "The project tackles the increasing issue of electronic waste by providing a solution for proper disposal. It links users to authorized e-waste disposal centers, ensuring safe and responsible handling of electronic waste. By encouraging proper disposal, the initiative supports environmentally sustainable e-waste practices.",
-      tech: ['React.js', 'Spring Boot', 'MySQL', 'REST APIs', 'Full Stack'],
+      description: "A full-stack web application designed to help users locate nearby e-waste drop-off points. The system promotes environmental sustainability by connecting users with authorized e-waste disposal centers, ensuring safe and responsible handling of electronic waste.",
+      tech: ['Core Java', 'Spring Boot', 'MySQL', 'React.js', 'HTML/CSS', 'JavaScript'],
       github: "#",
-      live: "#"
+      live: "#",
+      category: "Full-Stack Project"
     },
     {
-      title: "Online Voting System",
-      description: "The system allows registered users to vote remotely in a controlled and secure environment. It eliminates manual errors, long queues, and geographical barriers, making voting more efficient. The platform maintains transparency and accuracy while safeguarding the election process.",
-      tech: ['Full Stack', 'Spring Boot', 'React.js', 'MySQL', 'Security'],
+      title: "Job & Internship Portal",
+      description: "Comprehensive full-stack application featuring user authentication, Excel data upload functionality, real-time analytics dashboard, and separate admin panels. Built to streamline the job application process for both candidates and recruiters.",
+      tech: ['Spring Boot', 'MySQL', 'React.js', 'Excel Integration', 'Authentication', 'Admin Dashboard'],
       github: "#",
-      live: "#"
+      live: "#",
+      category: "Full-Stack Project"
     },
     {
       title: "Library Management System",
-      description: "Developed a system using Java, MySQL, and JDBC to handle book inventory, user registrations, and track borrowing/returns. Ensured smooth and intuitive functionality for seamless library management.",
+      description: "Academic project developed using Core Java and MySQL with JDBC connectivity. Features include book inventory management, user registration system, and automated tracking of borrowing and return processes.",
       tech: ['Core Java', 'MySQL', 'JDBC', 'Database Design'],
       github: "#",
-      live: "#"
+      live: "#",
+      category: "Academic Project"
     },
     {
-      title: "Bank Application",
-      description: "A comprehensive banking application developed with Core Java and MySQL. Features account management, transaction processing, and secure banking operations with JDBC connectivity.",
-      tech: ['Core Java', 'MySQL', 'JDBC', 'Banking System'],
+      title: "Banking Application",
+      description: "Console-based banking system demonstrating object-oriented programming concepts. Implements account management, transaction processing, and secure banking operations with proper data persistence.",
+      tech: ['Core Java', 'MySQL', 'JDBC', 'OOP Concepts'],
       github: "#",
-      live: "#"
-    },
-    {
-      title: "Food Ordering System",
-      description: "A food ordering application built with Core Java and MySQL. Enables customers to browse menus, place orders, and manage food delivery services with efficient database management using JDBC.",
-      tech: ['Core Java', 'MySQL', 'JDBC', 'Order Management'],
-      github: "#",
-      live: "#"
+      live: "#",
+      category: "Academic Project"
     }
   ];
 
@@ -49,21 +46,24 @@ export const Projects = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Here are some of my recent projects that showcase my technical skills
+            Here are some key projects that showcase my technical skills and learning journey
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
               <CardHeader>
-                <CardTitle className="text-xl">{project.title}</CardTitle>
-                <CardDescription className="text-sm">{project.description}</CardDescription>
+                <div className="flex justify-between items-start mb-2">
+                  <CardTitle className="text-xl">{project.title}</CardTitle>
+                  <Badge variant="outline" className="text-xs">{project.category}</Badge>
+                </div>
+                <CardDescription className="text-sm leading-relaxed">{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="outline" className="text-xs">{tech}</Badge>
+                    <Badge key={techIndex} variant="secondary" className="text-xs">{tech}</Badge>
                   ))}
                 </div>
                 <div className="flex gap-4">

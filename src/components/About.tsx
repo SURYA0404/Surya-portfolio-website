@@ -9,19 +9,28 @@ export const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I am a dedicated and detail-oriented software engineer with a strong passion for building efficient and user-friendly applications. 
-            As a developer, I enjoy solving problems, learning new technologies, and contributing to impactful projects through clean and maintainable code.
+            I am a fresh graduate and self-motivated Software Engineer with a strong passion for backend development. 
+            Having recently completed my internship at Besant Technologies, I am eager to learn, grow, and contribute 
+            to innovative software solutions. I believe in writing clean, efficient code and am always excited to 
+            take on new challenges in the ever-evolving tech landscape.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="flex flex-wrap gap-2">
+            <h3 className="text-2xl font-semibold mb-4">Professional Qualities</h3>
+            <div className="flex flex-wrap gap-2 mb-6">
+              <Badge variant="secondary">Self-Motivated</Badge>
+              <Badge variant="secondary">Quick Learner</Badge>
+              <Badge variant="secondary">Team Collaborator</Badge>
               <Badge variant="secondary">Problem Solver</Badge>
-              <Badge variant="secondary">Team Player</Badge>
-              <Badge variant="secondary">Continuous Learner</Badge>
-              <Badge variant="secondary">Innovation Focused</Badge>
+              <Badge variant="secondary">Backend Focused</Badge>
+              <Badge variant="secondary">Fresh Graduate</Badge>
             </div>
+            <p className="text-gray-600 dark:text-gray-300">
+              Recently completed internship at <strong>Besant Technologies</strong>, where I gained hands-on 
+              experience in full-stack development and worked on real-world projects using modern technologies.
+            </p>
           </div>
           
           <div className="space-y-4">
@@ -33,9 +42,9 @@ export const About = () => {
                 <div className="grid grid-cols-2 gap-2">
                   <Badge>Core Java</Badge>
                   <Badge>Spring Boot</Badge>
-                  <Badge>React.js</Badge>
                   <Badge>MySQL</Badge>
-                  <Badge>REST APIs</Badge>
+                  <Badge>React.js</Badge>
+                  <Badge>JavaScript</Badge>
                   <Badge>JSP</Badge>
                 </div>
               </CardContent>
@@ -47,10 +56,10 @@ export const About = () => {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                  <li>• Full Stack Web Development</li>
-                  <li>• Database Design & Optimization</li>
-                  <li>• API Development & Integration</li>
-                  <li>• Responsive UI/UX Design</li>
+                  <li>• Backend Development with Java & Spring Boot</li>
+                  <li>• Database Design & Management</li>
+                  <li>• REST API Development</li>
+                  <li>• Full-Stack Web Applications</li>
                 </ul>
               </CardContent>
             </Card>
