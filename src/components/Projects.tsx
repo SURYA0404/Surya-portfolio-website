@@ -23,6 +23,22 @@ export const Projects = () => {
       category: "Backend Project"
     },
     {
+      title: "Library Management System",
+      description: "Developed a system using Java, MySQL, and JDBC to handle book inventory, user registrations, and track borrowing/returns. Ensured smooth and intuitive functionality for seamless library management.",
+      tech: ['Core Java', 'MySQL', 'JDBC', 'Database Design'],
+      github: "#",
+      live: "#",
+      category: "Backend Project"
+    },
+    {
+      title: "Bank Application",
+      description: "A robust banking application built with Core Java and MySQL. The system provides essential banking functionalities with secure data management and efficient transaction processing.",
+      tech: ['Core Java', 'MySQL', 'JDBC', 'Database Management'],
+      github: "#",
+      live: "#",
+      category: "Backend Project"
+    },
+    {
       title: "E-Waste Facility Locator",
       description: "A full-stack web application designed to help users locate nearby e-waste drop-off points. The system promotes environmental sustainability by connecting users with authorized e-waste disposal centers, ensuring safe and responsible handling of electronic waste.",
       tech: ['Core Java', 'Spring Boot', 'MySQL', 'React.js', 'HTML/CSS', 'JavaScript'],
