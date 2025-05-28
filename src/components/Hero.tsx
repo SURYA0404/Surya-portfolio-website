@@ -2,11 +2,12 @@
 import { Download, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-interface HeroProps {
-  onResumeDownload: () => void;
-}
+export const Hero = () => {
+  const handleResumeDownload = () => {
+    // This would typically link to your actual resume file
+    window.open('#', '_blank');
+  };
 
-export const Hero = ({ onResumeDownload }: HeroProps) => {
   return (
     <section id="home" className="pt-16 min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -25,7 +26,7 @@ export const Hero = ({ onResumeDownload }: HeroProps) => {
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
               View Projects
             </Button>
-            <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={onResumeDownload}>
+            <Button size="lg" className="bg-green-600 hover:bg-green-700" onClick={handleResumeDownload}>
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </Button>

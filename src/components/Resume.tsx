@@ -1,75 +1,13 @@
 
-import { useState, useEffect } from 'react';
 import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { toast } from '@/hooks/use-toast';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const Resume = () => {
-  const [resumeFile, setResumeFile] = useState<File | null>(null);
-  const [resumeUrl, setResumeUrl] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Load resume from localStorage on component mount
-    const savedResumeUrl = localStorage.getItem('resumeUrl');
-    if (savedResumeUrl) {
-      setResumeUrl(savedResumeUrl);
-    }
-  }, []);
-
-  const handleResumeUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file && file.type === 'application/pdf') {
-      setResumeFile(file);
-      const url = URL.createObjectURL(file);
-      setResumeUrl(url);
-      // Save to localStorage for persistence
-      localStorage.setItem('resumeUrl', url);
-      localStorage.setItem('resumeName', file.name);
-      toast({
-        title: "Resume Uploaded!",
-        description: "Your resume has been successfully uploaded and is now available for download.",
-      });
-    } else {
-      toast({
-        title: "Invalid File",
-        description: "Please upload a PDF file only.",
-        variant: "destructive",
-      });
-    }
-  };
-
   const handleResumeDownload = () => {
-    if (resumeUrl) {
-      const link = document.createElement('a');
-      link.href = resumeUrl;
-      link.download = localStorage.getItem('resumeName') || 'resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      toast({
-        title: "Download Started",
-        description: "Your resume is being downloaded.",
-      });
-    } else {
-      toast({
-        title: "No Resume Available",
-        description: "Please upload your resume first.",
-        variant: "destructive",
-      });
-    }
-  };
-
-  const handleRemoveResume = () => {
-    setResumeFile(null);
-    setResumeUrl(null);
-    localStorage.removeItem('resumeUrl');
-    localStorage.removeItem('resumeName');
-    toast({
-      title: "Resume Removed",
-      description: "Your resume has been removed successfully.",
-    });
+    // This would typically link to your actual resume file
+    // For now, it shows a message that resume is not available
+    window.open('#', '_blank');
   };
 
   return (
@@ -78,51 +16,39 @@ export const Resume = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Resume</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            {resumeUrl ? 'Download my resume or upload a new version' : 'Upload your resume to make it available for download'}
+            Download my resume to learn more about my experience and qualifications
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle className="text-center">Resume Management</CardTitle>
-              <CardDescription className="text-center">
-                Upload your PDF resume to make it available for visitors to download
-              </CardDescription>
+              <CardTitle className="text-center">Professional Summary</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="flex flex-col items-center space-y-4">
-                <Input
-                  type="file"
-                  accept=".pdf"
-                  onChange={handleResumeUpload}
-                  className="max-w-md"
-                />
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Only PDF files are accepted
+              <div className="text-center space-y-4">
+                <p className="text-gray-600 dark:text-gray-300">
+                  Fresh Computer Science graduate with hands-on experience in Java development 
+                  and backend technologies. Completed internship at Besant Technologies and 
+                  developed multiple full-stack projects.
                 </p>
-              </div>
-              
-              {resumeUrl && (
-                <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span className="text-green-700 dark:text-green-300 font-medium">
-                        Resume uploaded successfully
-                      </span>
-                    </div>
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      onClick={handleRemoveResume}
-                      className="text-red-600 border-red-300 hover:bg-red-50"
-                    >
-                      Remove
-                    </Button>
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div>
+                    <h3 className="font-semibold mb-2">Education</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      Bachelor's in Computer Science<br/>
+                      Recent Graduate
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-2">Experience</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      Internship at Besant Technologies<br/>
+                      Java Development Focus
+                    </p>
                   </div>
                 </div>
-              )}
+              </div>
             </CardContent>
           </Card>
           
@@ -131,16 +57,13 @@ export const Resume = () => {
               size="lg" 
               className="bg-blue-600 hover:bg-blue-700" 
               onClick={handleResumeDownload}
-              disabled={!resumeUrl}
             >
               <Download className="mr-2 h-5 w-5" />
               Download Resume PDF
             </Button>
-            {resumeUrl && (
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
-                Resume file: {localStorage.getItem('resumeName') || 'resume.pdf'}
-              </p>
-            )}
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+              Click to download my complete resume
+            </p>
           </div>
         </div>
       </div>
