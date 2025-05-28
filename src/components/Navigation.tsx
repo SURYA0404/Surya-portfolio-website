@@ -23,7 +23,6 @@ export const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
             <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
             <a href="#projects" className="hover:text-blue-600 transition-colors">Projects</a>
             <a href="#skills" className="hover:text-blue-600 transition-colors">Skills</a>
-            <a href="#resume" className="hover:text-blue-600 transition-colors">Resume</a>
             <a href="#contact" className="hover:text-blue-600 transition-colors">Contact</a>
           </div>
 
@@ -58,7 +57,6 @@ export const Navigation = ({ darkMode, toggleDarkMode }: NavigationProps) => {
             <a href="#about" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">About</a>
             <a href="#projects" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Projects</a>
             <a href="#skills" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Skills</a>
-            <a href="#resume" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Resume</a>
             <a href="#contact" className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md">Contact</a>
           </div>
         </div>

@@ -13,15 +13,36 @@ export const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you'd send this to a backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // Create mailto link with form data
+      const subject = `Portfolio Contact from ${formData.name}`;
+      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+      const mailtoLink = `mailto:savioursurya2001@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Email Client Opened!",
+        description: "Your default email client should open with the message pre-filled. Please send it to complete your inquiry.",
+      });
+      
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try sending an email directly to savioursurya2001@gmail.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -108,7 +129,7 @@ export const Contact = () => {
             <CardHeader>
               <CardTitle>Send Message</CardTitle>
               <CardDescription>
-                Fill out the form below and I'll get back to you soon
+                Fill out the form below and your email client will open with the message pre-filled
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -136,8 +157,8 @@ export const Contact = () => {
                   required
                   rows={4}
                 />
-                <Button type="submit" className="w-full">
-                  Send Message
+                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting ? 'Opening Email Client...' : 'Send Message'}
                 </Button>
               </form>
             </CardContent>

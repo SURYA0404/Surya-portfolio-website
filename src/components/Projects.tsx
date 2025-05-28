@@ -7,6 +7,22 @@ import { Badge } from '@/components/ui/badge';
 export const Projects = () => {
   const projects = [
     {
+      title: "Online Voting System",
+      description: "The system allows registered users to vote remotely in a controlled and secure environment. It eliminates manual errors, long queues, and geographical barriers, making voting more efficient. The platform maintains transparency and accuracy while safeguarding the election process.",
+      tech: ['Full Stack Development', 'Spring Boot', 'React.js', 'MySQL', 'Security Features'],
+      github: "#",
+      live: "#",
+      category: "Full-Stack Project"
+    },
+    {
+      title: "Food Ordering System",
+      description: "A comprehensive food ordering application that allows users to browse menus, place orders, and manage their food delivery experience. Built with robust backend architecture using Core Java and MySQL database for efficient data management.",
+      tech: ['Core Java', 'MySQL', 'JDBC', 'Database Design'],
+      github: "#",
+      live: "#",
+      category: "Backend Project"
+    },
+    {
       title: "E-Waste Facility Locator",
       description: "A full-stack web application designed to help users locate nearby e-waste drop-off points. The system promotes environmental sustainability by connecting users with authorized e-waste disposal centers, ensuring safe and responsible handling of electronic waste.",
       tech: ['Core Java', 'Spring Boot', 'MySQL', 'React.js', 'HTML/CSS', 'JavaScript'],
@@ -21,22 +37,6 @@ export const Projects = () => {
       github: "#",
       live: "#",
       category: "Full-Stack Project"
-    },
-    {
-      title: "Library Management System",
-      description: "Academic project developed using Core Java and MySQL with JDBC connectivity. Features include book inventory management, user registration system, and automated tracking of borrowing and return processes.",
-      tech: ['Core Java', 'MySQL', 'JDBC', 'Database Design'],
-      github: "#",
-      live: "#",
-      category: "Academic Project"
-    },
-    {
-      title: "Banking Application",
-      description: "Console-based banking system demonstrating object-oriented programming concepts. Implements account management, transaction processing, and secure banking operations with proper data persistence.",
-      tech: ['Core Java', 'MySQL', 'JDBC', 'OOP Concepts'],
-      github: "#",
-      live: "#",
-      category: "Academic Project"
     }
   ];
 
