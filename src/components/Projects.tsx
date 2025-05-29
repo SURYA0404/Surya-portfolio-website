@@ -12,7 +12,8 @@ export const Projects = () => {
       tech: ['Full Stack Development', 'Spring Boot', 'React.js', 'MySQL', 'Security Features'],
       github: "#",
       live: "#",
-      category: "Full-Stack Project"
+      category: "Full-Stack Project",
+      image: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=500&h=300&fit=crop"
     },
     {
       title: "Food Ordering System",
@@ -20,7 +21,8 @@ export const Projects = () => {
       tech: ['Core Java', 'MySQL', 'JDBC', 'Database Design'],
       github: "#",
       live: "#",
-      category: "Backend Project"
+      category: "Backend Project",
+      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500&h=300&fit=crop"
     },
     {
       title: "Library Management System",
@@ -28,7 +30,8 @@ export const Projects = () => {
       tech: ['Core Java', 'MySQL', 'JDBC', 'Database Design'],
       github: "#",
       live: "#",
-      category: "Backend Project"
+      category: "Backend Project",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop"
     },
     {
       title: "Bank Application",
@@ -36,7 +39,8 @@ export const Projects = () => {
       tech: ['Core Java', 'MySQL', 'JDBC', 'Database Management'],
       github: "#",
       live: "#",
-      category: "Backend Project"
+      category: "Backend Project",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop"
     },
     {
       title: "E-Waste Facility Locator",
@@ -44,7 +48,8 @@ export const Projects = () => {
       tech: ['Core Java', 'Spring Boot', 'MySQL', 'React.js', 'HTML/CSS', 'JavaScript'],
       github: "#",
       live: "#",
-      category: "Full-Stack Project"
+      category: "Full-Stack Project",
+      image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500&h=300&fit=crop"
     },
     {
       title: "Job & Internship Portal",
@@ -52,7 +57,8 @@ export const Projects = () => {
       tech: ['Spring Boot', 'MySQL', 'React.js', 'Excel Integration', 'Authentication', 'Admin Dashboard'],
       github: "#",
       live: "#",
-      category: "Full-Stack Project"
+      category: "Full-Stack Project",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop"
     }
   ];
 
@@ -69,6 +75,13 @@ export const Projects = () => {
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardHeader>
                 <div className="flex justify-between items-start mb-2">
                   <CardTitle className="text-xl">{project.title}</CardTitle>
