@@ -1,5 +1,5 @@
 
-import { Award, Calendar, Building } from 'lucide-react';
+import { Award, Calendar, Building, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -12,7 +12,8 @@ export const Certificates = () => {
       description: "Comprehensive training in Java Full Stack development covering Core Java, Spring Boot, MySQL, and web technologies.",
       image: "/lovable-uploads/eb060a6a-8530-40dc-bba8-8a67a29f57a4.png",
       category: "Professional Training",
-      skills: ["Core Java", "Spring Boot", "MySQL", "Full Stack Development"]
+      skills: ["Core Java", "Spring Boot", "MySQL", "Full Stack Development"],
+      driveLink: "https://drive.google.com/file/d/1cNqTN6eHf8py7azMBbaQblo0GZXtun1e/view?usp=sharing"
     },
     {
       title: "Web Development Internship",
@@ -21,7 +22,8 @@ export const Certificates = () => {
       description: "Certificate of Internship in Web Development Technologies, Chennai. Demonstrated enthusiastic attitude for learning and dependable work ethic.",
       image: "/lovable-uploads/4da2bca5-dbee-40ea-a471-ed53ba014d60.png",
       category: "Internship",
-      skills: ["Web Development", "HTML", "CSS", "JavaScript"]
+      skills: ["Web Development", "HTML", "CSS", "JavaScript"],
+      driveLink: "https://drive.google.com/file/d/1Q_N6JSnWzOowlp6xfDxlKVW-ZgE_iXru/view?usp=sharing"
     },
     {
       title: "C for Beginners",
@@ -30,7 +32,8 @@ export const Certificates = () => {
       description: "Successfully completed free online course covering fundamentals of C programming language.",
       image: "/lovable-uploads/e9b0016c-1771-41aa-8089-f358b29f689a.png",
       category: "Online Course",
-      skills: ["C Programming", "Programming Fundamentals"]
+      skills: ["C Programming", "Programming Fundamentals"],
+      driveLink: "https://drive.google.com/file/d/1xeN-JJHPekOxgzyougTeZEhWbt1IWY6q/view?usp=sharing"
     },
     {
       title: "Introduction to JavaScript",
@@ -39,7 +42,8 @@ export const Certificates = () => {
       description: "Completed comprehensive JavaScript course covering core concepts and practical applications.",
       image: "/lovable-uploads/08b1ffe3-f0e5-481b-a7c0-ac32ab681121.png",
       category: "Online Course",
-      skills: ["JavaScript", "Web Development", "Programming"]
+      skills: ["JavaScript", "Web Development", "Programming"],
+      driveLink: "https://drive.google.com/file/d/18kjvZY9lkd9UlxmdzyC12NmiwI8mB4D7/view?usp=sharing"
     },
     {
       title: "React JS Tutorial",
@@ -48,7 +52,8 @@ export const Certificates = () => {
       description: "Mastered React.js fundamentals and component-based development through hands-on tutorial.",
       image: "/lovable-uploads/51cd5c95-01c3-45e4-92c7-aeeecdeed376.png",
       category: "Online Course",
-      skills: ["React.js", "Frontend Development", "JavaScript"]
+      skills: ["React.js", "Frontend Development", "JavaScript"],
+      driveLink: "https://drive.google.com/file/d/1Vru86fiEqyiX8qZ9E96DgpUrUTSfPR8H/view?usp=sharing"
     },
     {
       title: "Google Data Analytics Professional Certificate",
@@ -57,9 +62,14 @@ export const Certificates = () => {
       description: "Completed 8-course professional certificate program covering data analytics tools including spreadsheets, SQL, Tableau, and R programming.",
       image: "/lovable-uploads/c791e84c-bf59-49c4-ac04-c42cc59fb0d0.png",
       category: "Professional Certificate",
-      skills: ["Data Analytics", "SQL", "Tableau", "R Programming", "Data Visualization"]
+      skills: ["Data Analytics", "SQL", "Tableau", "R Programming", "Data Visualization"],
+      driveLink: "https://drive.google.com/file/d/1Ajydf_ou3qhgEumKuqxzG6vZalEc7HLE/view?usp=sharing"
     }
   ];
+
+  const handleCertificateClick = (driveLink: string) => {
+    window.open(driveLink, '_blank');
+  };
 
   return (
     <section id="certificates" className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -67,13 +77,17 @@ export const Certificates = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Certificates & Achievements</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            My educational journey and professional certifications
+            My educational journey and professional certifications - Click to view certificates
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certificates.map((cert, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow group">
+            <Card 
+              key={index} 
+              className="overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
+              onClick={() => handleCertificateClick(cert.driveLink)}
+            >
               <div className="relative h-48 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-700 dark:to-gray-600">
                 <img 
                   src={cert.image} 
@@ -83,10 +97,17 @@ export const Certificates = () => {
                 <div className="absolute top-4 right-4">
                   <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
                 </div>
+                <div className="absolute top-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-white dark:bg-gray-800 rounded-full p-2 shadow-lg">
+                    <ExternalLink className="h-4 w-4 text-blue-600" />
+                  </div>
+                </div>
               </div>
               
               <CardHeader className="pb-3">
-                <CardTitle className="text-lg leading-tight">{cert.title}</CardTitle>
+                <CardTitle className="text-lg leading-tight group-hover:text-blue-600 transition-colors">
+                  {cert.title}
+                </CardTitle>
                 <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
                   <Building className="h-4 w-4" />
                   <span>{cert.institution}</span>
