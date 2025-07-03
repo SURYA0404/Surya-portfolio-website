@@ -1,13 +1,10 @@
-
 import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const Resume = () => {
   const handleResumeDownload = () => {
-    // This would typically link to your actual resume file
-    // For now, it shows a message that resume is not available
-    window.open('#', '_blank');
+    window.open('https://drive.google.com/file/d/1lpc-nueRGNsgrKmKlOrDOIk_4VoR6kEL/view?usp=sharing', '_blank');
   };
 
   return (

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 export const Hero = () => {
   const handleResumeDownload = () => {
-    window.open('https://drive.google.com/file/d/1hGrSI5tJPLQPZ_vthUodh6Ne1ukm_eJT/view', '_blank');
+    window.open('https://drive.google.com/file/d/1lpc-nueRGNsgrKmKlOrDOIk_4VoR6kEL/view?usp=sharing', '_blank');
   };
 
   return (
