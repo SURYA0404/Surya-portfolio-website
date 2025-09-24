@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 export const Hero = () => {
   const handleResumeDownload = () => {
-    window.open('https://drive.google.com/file/d/1lpc-nueRGNsgrKmKlOrDOIk_4VoR6kEL/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/17CtbVJ718yP-jXHuYSj745ho7_OgcoXF/view?usp=sharing', '_blank');
   };
 
   return (
@@ -27,10 +27,7 @@ export const Hero = () => {
             Java Full Stack Developer (Fresher)
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-            Hello! I'm an enthusiastic and motivated individual aspiring to build a successful career as a Full Stack Developer. 
-            I'm passionate about learning, exploring new technologies, and solving real-world problems through innovative web applications. 
-            As a fresher, I bring a strong commitment to growth, teamwork, and continuous improvement. I look forward to contributing to 
-            impactful projects and evolving as a professional in the tech industry.
+            I am an enthusiastic and motivated aspiring Full Stack Developer, passionate about building innovative web applications and solving real-world problems using modern technologies. As a fresher, I bring strong fundamentals in Core Java, Spring Boot, MySQL, React.js (or JSP), and web technologies (HTML, CSS, JavaScript) along with a commitment to continuous learning and teamwork. I am eager to contribute to impactful projects, grow as a professional, and deliver value to the organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>

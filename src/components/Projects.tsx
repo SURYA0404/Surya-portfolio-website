@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 export const Projects = () => {
   const projects = [
     {
-      title: "Online Voting System",
+      title: "A Secure Online Voting and Election Management Platform",
       description: "The system allows registered users to vote remotely in a controlled and secure environment. It eliminates manual errors, long queues, and geographical barriers, making voting more efficient. The platform maintains transparency and accuracy while safeguarding the election process.",
       tech: ['Full Stack Development', 'Spring Boot', 'React.js', 'MySQL', 'Security Features'],
       github: "#",
@@ -15,7 +15,7 @@ export const Projects = () => {
       image: "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=500&h=300&fit=crop"
     },
     {
-      title: "Food Ordering System",
+      title: "Delicious Food Ordering Platform",
       description: "A comprehensive food ordering application that allows users to browse menus, place orders, and manage their food delivery experience. Built with robust backend architecture using Core Java and MySQL database for efficient data management.",
       tech: ['Core Java', 'MySQL', 'JDBC', 'Database Design'],
       github: "#",
@@ -24,7 +24,7 @@ export const Projects = () => {
       image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=500&h=300&fit=crop"
     },
     {
-      title: "Library Management System",
+      title: "A Digital Library and Resource Management Platform",
       description: "Developed a system using Java, MySQL, and JDBC to handle book inventory, user registrations, and track borrowing/returns. Ensured smooth and intuitive functionality for seamless library management.",
       tech: ['Core Java', 'MySQL', 'JDBC', 'Database Design'],
       github: "#",
@@ -33,7 +33,7 @@ export const Projects = () => {
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=300&fit=crop"
     },
     {
-      title: "Bank Application",
+      title: "SecureBank Digital Banking Solution",
       description: "A robust banking application built with Core Java and MySQL. The system provides essential banking functionalities with secure data management and efficient transaction processing.",
       tech: ['Core Java', 'MySQL', 'JDBC', 'Database Management'],
       github: "#",
@@ -42,7 +42,7 @@ export const Projects = () => {
       image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=300&fit=crop"
     },
     {
-      title: "E-Waste Facility Locator",
+      title: "Smart E-Waste Facility Finder",
       description: "A full-stack web application designed to help users locate nearby e-waste drop-off points. The system promotes environmental sustainability by connecting users with authorized e-waste disposal centers, ensuring safe and responsible handling of electronic waste.",
       tech: ['Core Java', 'Spring Boot', 'MySQL', 'React.js', 'HTML/CSS', 'JavaScript'],
       github: "#",
@@ -51,7 +51,7 @@ export const Projects = () => {
       image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500&h=300&fit=crop"
     },
     {
-      title: "Job & Internship Portal",
+      title: "CareerConnect Job & Internship Portal",
       description: "Comprehensive full-stack application featuring user authentication, Excel data upload functionality, real-time analytics dashboard, and separate admin panels. Built to streamline the job application process for both candidates and recruiters.",
       tech: ['Spring Boot', 'MySQL', 'React.js', 'Excel Integration', 'Authentication', 'Admin Dashboard'],
       github: "#",

@@ -9,10 +9,7 @@ export const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I am a fresh graduate and self-motivated Software Engineer with a strong passion for backend development. 
-            Having recently completed my internship at Besant Technologies, I am eager to learn, grow, and contribute 
-            to innovative software solutions. I believe in writing clean, efficient code and am always excited to 
-            take on new challenges in the ever-evolving tech landscape.
+            I am a motivated and adaptable Software Engineer with a strong interest in backend and full stack development. Having recently completed my internship at Besant Technologies, I gained hands-on experience in Core Java, Spring Boot, MySQL, REST APIs, and web technologies. I am passionate about problem-solving, writing clean and efficient code, and collaborating in team environments. As a fresher, I am open to exploring any software development role—whether backend, frontend, or full stack—where I can continue to learn, grow, and contribute to real-world solutions in the dynamic tech industry.
           </p>
         </div>
         

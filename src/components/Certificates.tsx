@@ -64,6 +64,16 @@ export const Certificates = () => {
       category: "Professional Certificate",
       skills: ["Data Analytics", "SQL", "Tableau", "R Programming", "Data Visualization"],
       driveLink: "https://drive.google.com/file/d/1Ajydf_ou3qhgEumKuqxzG6vZalEc7HLE/view?usp=sharing"
+    },
+    {
+      title: "JP Morgan Software Engineering Job Simulation",
+      institution: "JP Morgan Chase & Co.",
+      date: "2024",
+      description: "Completed software engineering job simulation program covering practical software development skills and real-world project experience in financial technology.",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=300&fit=crop",
+      category: "Professional Simulation",
+      skills: ["Software Engineering", "Financial Technology", "Problem Solving", "Project Management"],
+      driveLink: "https://drive.google.com/file/d/1fXT8I0twJlFNpCaQfttQuNj3cItHvQ5P/view?usp=sharing"
     }
   ];
 
@@ -145,7 +155,7 @@ export const Certificates = () => {
             <CardContent>
               <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">6</div>
+                  <div className="text-2xl font-bold text-blue-600">7</div>
                   <div className="text-sm text-gray-600 dark:text-gray-300">Certificates Earned</div>
                 </div>
                 <div>
