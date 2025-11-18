@@ -7,7 +7,8 @@ export const Skills = () => {
     'Programming Languages': ['Core Java', 'JavaScript'],
     'Frameworks & Libraries': ['Spring Boot', 'React.js (Basic)'],
     'Frontend Technologies': ['HTML5', 'CSS3', 'JSP', 'Bootstrap'],
-    'Database & Tools': ['MySQL', 'JDBC', 'Postman', 'GitHub', 'Cloudinary']
+    'Database & Tools': ['MySQL', 'JDBC', 'Postman', 'GitHub', 'Cloudinary'],
+    'Cloud & DevOps': ['AWS', 'GCP', 'Azure', 'CI/CD']
   };
 
   return (
@@ -20,7 +21,7 @@ export const Skills = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {Object.entries(skills).map(([category, skillList]) => (
             <Card key={category} className="hover:shadow-md transition-shadow">
               <CardHeader>
